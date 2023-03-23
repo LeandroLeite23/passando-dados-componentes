@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import barramento from '@/barramento.js'
+
 export default {
     props: {
         nome: {
@@ -39,6 +41,11 @@ export default {
                 antigo
             }) */
         }
+    },
+    created() {
+        barramento.quandoIdadeMudar(idade => {
+            this.idade = idade
+        })
     }
 }
 </script>
