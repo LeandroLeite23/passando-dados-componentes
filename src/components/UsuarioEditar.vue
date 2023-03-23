@@ -8,12 +8,13 @@
 </template>
 
 <script>
+
 export default {
     props: { idade: Number },
     methods: {
         alterarIdade() {
-            //this.idade = 33
-            this.$emit('idadeMudou', 33)
+            this.idade = 33
+            this.$emit('idadeMudou', this.idade)
         }
     }
 }
